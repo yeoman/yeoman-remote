@@ -1,5 +1,8 @@
 # fetch-remote [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> Fetch a remote zip and extract it in a cache folder
+
+> Fetch packages and archives from remote resources with cache support
+
+This package is a simplified export of the `yeoman-generator` `remote`, `fetch` and `extract` functions. Currently, the preferred way is to use `npm` to fetch github resources at install time. We're providing this package to ease transition to newer versions of `yeoman-generator`.
 
 ## Installation
 
@@ -10,20 +13,34 @@ $ npm install --save fetch-remote
 ## Usage
 
 ```js
-var fetchRemote = require('fetch-remote');
+var remote = require('fetch-remote');
+var path = require('path');
 
-fetchRemote('Rainbow');
+module.exports = yeoman.Base.extend({
+  writing: function () {
+    var done = this.async();
+
+    remote('yeoman', 'generator', function (cachePath) {
+      this.fs.copy(
+        path.join(cachePath, 'lib/index.js'),
+        this.destinationPath('lib/index.js')
+      );
+      done();
+    }.bind(this));
+  }
+})
 ```
+
 ## License
 
- © [The Yeoman Team](http://yeoman.io)
+MIT © [The Yeoman Team](http://yeoman.io)
 
 
 [npm-image]: https://badge.fury.io/js/fetch-remote.svg
 [npm-url]: https://npmjs.org/package/fetch-remote
-[travis-image]: https://travis-ci.org//fetch-remote.svg?branch=master
-[travis-url]: https://travis-ci.org//fetch-remote
-[daviddm-image]: https://david-dm.org//fetch-remote.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org//fetch-remote
-[coveralls-image]: https://coveralls.io/repos//fetch-remote/badge.svg
-[coveralls-url]: https://coveralls.io/r//fetch-remote
+[travis-image]: https://travis-ci.org/yeoman/fetch-remote.svg?branch=master
+[travis-url]: https://travis-ci.org/yeoman/fetch-remote
+[daviddm-image]: https://david-dm.org/yeoman/fetch-remote.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/yeoman/fetch-remote
+[coveralls-image]: https://coveralls.io/repos/yeoman/fetch-remote/badge.svg
+[coveralls-url]: https://coveralls.io/r/yeoman/fetch-remote
