@@ -2,6 +2,7 @@
   "name": "fetch-remote",
   "version": "0.0.0",
   "description": "Fetch a remote zip and extract it in a cache folder",
+  "license": "MIT",
   "author": {
     "name": "The Yeoman Team",
     "url": "http://yeoman.io"
@@ -19,13 +20,15 @@
   "devDependencies": {
     "eslint-config-xo-space": "^0.7.0",
     "gulp": "^3.9.0",
+    "gulp-coveralls": "^0.1.0",
     "gulp-eslint": "^1.0.0",
     "gulp-exclude-gitignore": "^1.0.0",
     "gulp-istanbul": "^0.10.3",
     "gulp-mocha": "^2.0.0",
-    "gulp-plumber": "^1.0.0",
     "gulp-nsp": "^2.1.0",
-    "gulp-coveralls": "^0.1.0"
+    "gulp-plumber": "^1.0.0",
+    "nock": "^5.2.1",
+    "yeoman-assert": "^2.1.1"
   },
   "eslintConfig": {
     "extends": "xo-space",
@@ -37,5 +40,12 @@
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
+  },
+  "dependencies": {
+    "download": "^4.4.3",
+    "glob": "^6.0.4",
+    "lodash": "^3.10.1",
+    "rimraf": "^2.5.0",
+    "underscore.string": "^3.2.2"
   }
 }
