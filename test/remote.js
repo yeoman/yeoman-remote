@@ -1,13 +1,12 @@
-/*global describe, it, before, beforeEach */
+/* global describe, it, before, beforeEach */
 'use strict';
 var os = require('os');
 var path = require('path');
 var fs = require('fs');
 var assert = require('yeoman-assert');
 var nock = require('nock');
-var tmpdir = path.join(os.tmpdir(), 'yeoman-remote');
+var tmp = path.join(os.tmpdir(), 'yeoman-remote');
 var remote = require('..');
-
 
 describe('remote()', function () {
   beforeEach(function () {
@@ -22,8 +21,8 @@ describe('remote()', function () {
 
   it('cache the result internally into a `_cache` folder', function (done) {
     remote('yeoman', 'generator', function () {
-      fs.stat(path.join(cacheRoot(), 'yeoman/generator/master'), done);
-    }.bind(this));
+      fs.stat(path.join(remote.cacheRoot(), 'yeoman/generator/master'), done);
+    });
   });
 
   it('invoke `cb` with a cachePath', function (done) {
@@ -33,11 +32,13 @@ describe('remote()', function () {
         return;
       }
 
-      assert.equal(cachePath, '');
+      assert.equal(
+        path.join(remote.cacheRoot(), 'yeoman/generator/master'),
+        cachePath
+      );
       done();
     });
   });
-
 });
 
 describe('remote.extract()', function () {

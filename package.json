@@ -43,7 +43,6 @@
   },
   "dependencies": {
     "download": "^4.4.3",
-    "glob": "^6.0.4",
     "lodash": "^3.10.1",
     "rimraf": "^2.5.0",
     "underscore.string": "^3.2.2"
