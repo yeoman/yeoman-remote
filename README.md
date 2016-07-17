@@ -4,8 +4,6 @@
 
 This package is a simplified export of the `yeoman-generator` `remote`, `fetch` and `extract` functions. Currently, the preferred way is to use `npm` to fetch github resources at install time. We're providing this package to ease transition to newer versions of `yeoman-generator`.
 
-**_Note: This package is not finalized yet. You should be aware that some things might not work properly._**
-
 ## Installation
 
 ```sh
@@ -30,8 +28,10 @@ module.exports = yeoman.Base.extend({
       done();
     }.bind(this));
   }
-})
+});
 ```
+
+`remote.fetch` and `remote.extract` methods are also available.
 
 ## License
 
