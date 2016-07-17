@@ -1,4 +1,4 @@
-# fetch-remote [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# yeoman-remote [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
 > Fetch packages and archives from remote resources with cache support
 
@@ -9,13 +9,13 @@ This package is a simplified export of the `yeoman-generator` `remote`, `fetch` 
 ## Installation
 
 ```sh
-$ npm install --save fetch-remote
+$ npm install --save yeoman-remote
 ```
 
 ## Usage
 
 ```js
-var remote = require('fetch-remote');
+var remote = require('yeoman-remote');
 var path = require('path');
 
 module.exports = yeoman.Base.extend({
@@ -38,11 +38,11 @@ module.exports = yeoman.Base.extend({
 MIT © [The Yeoman Team](http://yeoman.io)
 
 
-[npm-image]: https://badge.fury.io/js/fetch-remote.svg
-[npm-url]: https://npmjs.org/package/fetch-remote
-[travis-image]: https://travis-ci.org/yeoman/fetch-remote.svg?branch=master
-[travis-url]: https://travis-ci.org/yeoman/fetch-remote
-[daviddm-image]: https://david-dm.org/yeoman/fetch-remote.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/yeoman/fetch-remote
-[coveralls-image]: https://coveralls.io/repos/yeoman/fetch-remote/badge.svg
-[coveralls-url]: https://coveralls.io/r/yeoman/fetch-remote
+[npm-image]: https://badge.fury.io/js/yeoman-remote.svg
+[npm-url]: https://npmjs.org/package/yeoman-remote
+[travis-image]: https://travis-ci.org/yeoman/yeoman-remote.svg?branch=master
+[travis-url]: https://travis-ci.org/yeoman/yeoman-remote
+[daviddm-image]: https://david-dm.org/yeoman/yeoman-remote.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/yeoman/yeoman-remote
+[coveralls-image]: https://coveralls.io/repos/yeoman/yeoman-remote/badge.svg
+[coveralls-url]: https://coveralls.io/r/yeoman/yeoman-remote

@@ -1,5 +1,5 @@
 {
-  "name": "fetch-remote",
+  "name": "yeoman-remote",
   "version": "0.0.0",
   "description": "Fetch a remote zip and extract it in a cache folder",
   "license": "MIT",
@@ -36,7 +36,7 @@
       "mocha": true
     }
   },
-  "repository": "yeoman/fetch-remote",
+  "repository": "yeoman/yeoman-remote",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
