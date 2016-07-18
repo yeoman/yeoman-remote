@@ -1,6 +1,6 @@
 {
   "name": "yeoman-remote",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fetch a remote zip and extract it in a cache folder",
   "license": "MIT",
   "author": {
