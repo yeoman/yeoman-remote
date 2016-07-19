@@ -20,7 +20,7 @@ module.exports = yeoman.Base.extend({
   writing: function () {
     var done = this.async();
 
-    remote('yeoman', 'generator', function (cachePath) {
+    remote('yeoman', 'generator', function (err, cachePath) {
       this.fs.copy(
         path.join(cachePath, 'lib/index.js'),
         this.destinationPath('lib/index.js')
