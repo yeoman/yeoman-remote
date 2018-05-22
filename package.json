@@ -42,7 +42,7 @@
     "test": "gulp"
   },
   "dependencies": {
-    "download": "^4.4.3",
+    "download": "^7.0.0",
     "lodash": "^4.13.1",
     "rimraf": "^2.5.0",
     "underscore.string": "^3.2.2",
